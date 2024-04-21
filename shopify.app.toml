@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8b3a182bbac4b418f8564bb0c5c94eba"
+name = "email-marketing"
+handle = "email-marketing-22"
+application_url = "https://choir-rca-guidance-well.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-3a56d639.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://choir-rca-guidance-well.trycloudflare.com/auth/callback",
+  "https://choir-rca-guidance-well.trycloudflare.com/auth/shopify/callback",
+  "https://choir-rca-guidance-well.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
