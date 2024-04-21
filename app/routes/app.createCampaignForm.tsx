@@ -17,7 +17,7 @@ const CreateCampaignForm: React.FC<CreateCampaignFormProps> = ({ activate, setAc
 
     const handleChangeText = useCallback((newValue: string) => setValue(newValue), []);
 
-    const activator = <Button onClick={handleChange}>Open</Button>;
+    const activator = <Button onClick={handleChange}>Create new</Button>;
 
 
     const submit = useSubmit();
@@ -37,53 +37,48 @@ const CreateCampaignForm: React.FC<CreateCampaignFormProps> = ({ activate, setAc
                         content: "Send",
                         onAction: sendEmails
                     }}
-                    // secondaryActions={{
-                    //     content: "Finish Later",
-                    //     onAction: () =>
-                    // }}
                 >
+                    <Modal.Section>
+                        <Form>
+                            <Layout>
+                                <Layout.Section>
+                                    <TextField 
+                                        label="Campaign Name"
+                                        value={value}
+                                        onChange={handleChangeText}
+                                        autoComplete='off'
+                                    />
+                                    <TextField 
+                                        label="Corporation"
+                                        value={value}
+                                        onChange={handleChangeText}
+                                        autoComplete='off'
+                                    />
+                                    <TextField 
+                                        label="From"
+                                        value={value}
+                                        onChange={handleChangeText}
+                                        autoComplete='off'
+                                    />
+                                    <TextField 
+                                        label="Email Subject"
+                                        value={value}
+                                        onChange={handleChangeText}
+                                        autoComplete='off'
+                                    />
+                                    <TextField 
+                                        label="Content"
+                                        value={value}
+                                        onChange={handleChangeText}
+                                        autoComplete='off'
+                                    />
 
+                                    {/* <Button submit>send</Button> */}
+                                </Layout.Section>
+                            </Layout>
+                        </Form>
+                    </Modal.Section>
                 </Modal>
-                <Modal.Section>
-                    <Form>
-                        <Layout>
-                            <Layout.Section>
-                                <TextField 
-                                    label="Campaign Name"
-                                    value={value}
-                                    onChange={handleChangeText}
-                                    autoComplete='off'
-                                />
-                                <TextField 
-                                    label="Corporation"
-                                    value={value}
-                                    onChange={handleChangeText}
-                                    autoComplete='off'
-                                />
-                                <TextField 
-                                    label="From"
-                                    value={value}
-                                    onChange={handleChangeText}
-                                    autoComplete='off'
-                                />
-                                <TextField 
-                                    label="Email Subject"
-                                    value={value}
-                                    onChange={handleChangeText}
-                                    autoComplete='off'
-                                />
-                                <TextField 
-                                    label="Content"
-                                    value={value}
-                                    onChange={handleChangeText}
-                                    autoComplete='off'
-                                />
-
-                                <Button submit>send</Button>
-                            </Layout.Section>
-                        </Layout>
-                    </Form>
-                </Modal.Section>
             </Frame>
         </Page>
     )

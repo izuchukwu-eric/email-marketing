@@ -3,7 +3,7 @@
 client_id = "8b3a182bbac4b418f8564bb0c5c94eba"
 name = "email-marketing"
 handle = "email-marketing-22"
-application_url = "https://choir-rca-guidance-well.trycloudflare.com"
+application_url = "https://advice-asus-hierarchy-beautiful.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://choir-rca-guidance-well.trycloudflare.com/auth/callback",
-  "https://choir-rca-guidance-well.trycloudflare.com/auth/shopify/callback",
-  "https://choir-rca-guidance-well.trycloudflare.com/api/auth/callback"
+  "https://advice-asus-hierarchy-beautiful.trycloudflare.com/auth/callback",
+  "https://advice-asus-hierarchy-beautiful.trycloudflare.com/auth/shopify/callback",
+  "https://advice-asus-hierarchy-beautiful.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

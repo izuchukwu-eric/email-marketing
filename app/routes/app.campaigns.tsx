@@ -1,4 +1,4 @@
-import { Button, InlineGrid, Layout, LegacyCard, Page, Tabs, Text } from '@shopify/polaris';
+import { InlineGrid, Layout, LegacyCard, Page, Tabs, Text } from '@shopify/polaris';
 import React, { useCallback, useState } from 'react'
 import { tabs } from '~/utils/tabs';
 import CreateCampaignForm from './app.createCampaignForm';
@@ -18,7 +18,6 @@ const CampaignsPage = (props: Props) => {
             <Layout.Section>
                 <InlineGrid columns={2}>
                     <Text variant='heading3xl' as="h2">Campaigns</Text>
-                    <Button>Create new campaign</Button>
                 </InlineGrid>
             </Layout.Section>
             <Layout.Section>
@@ -31,9 +30,7 @@ const CampaignsPage = (props: Props) => {
                 </LegacyCard>
             </Layout.Section>
 
-            <Layout.Section>
-                <CreateCampaignForm activate={activate} setActivate={setActivate} />
-            </Layout.Section>
+            <CreateCampaignForm activate={activate} setActivate={setActivate} />
         </Layout>
     </Page>
   )
